@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <link rel = "stylesheet" href = "{% static 'myglobal.css' %}">
+    <b><title>Testing</title></b>
+<body>
+
+<ul>
+{% for x in fruits %}
+    <li
+        {% if forloop.first %}
+         style='background-color:lightblue;'
+        {% endif %}
+    >{{ x }}</li>
+{% endfor %}
+</ul>
+<h1>Hello {{ firstname}}, how are you?</h1>
+
+
+<h1>Hello {{ lastname}}, how are you?</h1>
+
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+{% comment %} <ul>
+    {% for x in mymembers %}
+      <li>{{ x.firstname }}</li>
+    {% endfor %}
+  </ul> {% endcomment %}
+
+{% for x in members reversed %}
+<i>{{x.id}}</i>
+
+  <p>
+    {{ x.firstname }}
+    {{ x.lastname }}
+  </p>
+
+{% endfor %}
+
+
+{% comment %}
+<b> I am leraning django</b>
+{% endcomment %}
+
+<h1> Hello</h1>
+<p> Footer man</p>
+{% include 'footer.html' %}
+
+{% include 'menu.html' with me="Felix Mokaya " sponsor="Karatina" %}
+<p> Welcome</p>
+</body>
+</html>
+
+

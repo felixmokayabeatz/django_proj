@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<link rel = "stylesheet" href="{% static 'felix.css' %}">
+
+<body>
+{{mymembers}}
+
+<table border = '1'>
+    {% for x in firstname %}
+    <tr>
+        <td>{{x}}</td>
+    </tr>
+
+    {%  endfor %}
+
+    </table>
+</body>
+</html>
+

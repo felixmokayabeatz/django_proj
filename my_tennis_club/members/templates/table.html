@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Table
+{% endblock %}
+
+{% block content %}
+    <table border='1'>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        {% for x in mymembers %}
+            <tr>
+                <td>{{ x.id }}</td>
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Home</a>
+{% endblock %}
